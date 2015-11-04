@@ -14,12 +14,20 @@
     // .append("p")
     // .text("New paragraph! hello world");
 
-    var dataset = [ 5, 10, 15, 20, 25 ];
 
-    
-    var body = d3.select("body");
-    var p = body.append("p");
-    p.text("New paragraph!");
+
+
+    // // var body = d3.select("body");
+    // // var p = body.append("p");
+    // // p.text("New paragraph!");
+
+
+    var dataset = [5, 10, 15, 20, 25];
+    d3.select("body").selectAll("p")
+        .data(dataset)
+        .enter()
+        .append("p")
+        .text("New paragraph!");
     </script>
 </body>
 
