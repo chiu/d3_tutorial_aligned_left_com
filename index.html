@@ -27,7 +27,8 @@
         .data(dataset)
         .enter()
         .append("p")
-        .text("New paragraph!");
+        // .text("New paragraph!");
+        .text(function(some_data) { return some_data; });
     </script>
 </body>
 
