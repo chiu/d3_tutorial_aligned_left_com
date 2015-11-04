@@ -8,7 +8,14 @@
     <body>
         <script type="text/javascript">
             // Your beautiful D3 code will go here
-            d3.select("body").append("p").text("New paragraph!");
+            // d3.selectAll("body")
+            // .append("p")
+            // .text("New paragraph! hello world");
+
+            var body = d3.select("body");
+var p = body.append("p");
+p.text("New paragraph!");
+
         </script>
     </body>
 </html>     
