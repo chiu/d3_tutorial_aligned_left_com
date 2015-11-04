@@ -13,23 +13,23 @@
     // d3.selectAll("body")
     // .append("p")
     // .text("New paragraph! hello world");
-
-
-
-
     // // var body = d3.select("body");
     // // var p = body.append("p");
     // // p.text("New paragraph!");
 
+    function someFunction(d) {
+        return "I can add up to " + d;
+    }
 
     var dataset = [5, 10, 15, 20, 25];
-    d3.select("body").selectAll("p")
+    temp = d3.select("body").selectAll("p")
         .data(dataset)
         .enter()
         .append("p")
-        // .text("New paragraph!");
-        .text(function(some_data) { return some_data; });
+        .text(function(d) {
+            return "I can count up to " + d;
+        })
+        .style("color", "red");
     </script>
 </body>
-
 </html>
