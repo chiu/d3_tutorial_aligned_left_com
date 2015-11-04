@@ -28,7 +28,13 @@
         .data(dataset)
         .enter()
         .append("div")
-        .attr("class", "bar");
+        .attr("class", "bar")
+        .style("height", function(d) {
+            // return d + "px";
+            var barHeight = d * 5; //Scale up by a factor 9f 5
+            return barHeight + "px";
+        })
+        .style("margin-right", "2px");
 
     // .append("p")
     // .text(function(d) {
